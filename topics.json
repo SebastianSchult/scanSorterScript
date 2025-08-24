@@ -16,5 +16,8 @@
   "Spenden": ["spende", "spendenquittung", "gemeinnützig"],
   "Toom": ["toom", "toom baumarkt", "baumarkt", "renovierung", "baustoffe"],
   "Stadt Cuxhaven": ["cuxhaven", "stadt", "abfall", "müll", "muell", "wasser", "gebühren", "gebuehren"],
+  "Hornbach": ["hornbach", "hornbach baumarkt", "baumarkt", "renovierung", "baustoffe"],
+  "Hasselbring": ["hasselbring", "hasselbring baumarkt", "baumarkt", "renovierung", "baustoffe"],
+  "DM": ["dm", "dm drogeriemarkt", "drogeriemarkt", "kosmetik", "pflege"],
   "Sonstiges": []
 }

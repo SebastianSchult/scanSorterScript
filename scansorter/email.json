@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 465,
+  "security": "SSL",
+  "from_addr": "schult.sebastian@gmail.com",
+  "to_addrs": ["schult.sebastian@gmail.com"],
+  "username": "schult.sebastian@gmail.com"
+}

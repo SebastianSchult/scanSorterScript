@@ -1,0 +1,52 @@
+ScanSorter Non-Commercial License v1.0
+Copyright (c) 2025 Sebastian Schult
+Contact: contact@sebastian-schult-dev.de
+
+Permission is hereby granted, free of charge, to any natural person obtaining a copy
+of this software and associated documentation files (the “Software”), to use, copy,
+and modify the Software for strictly private, non-commercial purposes, subject to
+the following conditions:
+
+1) Non-Commercial Use Only
+   - You may use, copy, and modify the Software only for personal, private, or
+     educational use where no direct or indirect commercial advantage is intended
+     or realized.
+   - Any commercial use (including but not limited to: use in a business, paid
+     services, SaaS/hosted offerings, internal company tools that support revenue,
+     redistribution for a fee, or integration into commercial products) requires a
+     separate commercial license from the copyright holder. Please contact:
+     contact@sebastian-schult-dev.de
+
+2) Redistribution
+   - You may share unmodified or modified copies of the Software for non-commercial
+     purposes, provided that:
+       a) You include this license text and the copyright notice in full.
+       b) You provide clear attribution to “Sebastian Schult”.
+       c) You make it clear if you have made changes.
+       d) You do not charge any fee beyond reasonable media or transfer costs.
+       e) You distribute derivative works under the same license (Non-Commercial).
+
+3) Third-Party Components
+   - The Software may include or depend on third-party libraries that are
+     separately licensed. Those components remain governed by their respective
+     licenses. You are responsible for complying with those licenses.
+
+4) No Trademark or Endorsement
+   - This license does not grant permission to use the names, logos, or trademarks
+     of the copyright holder. No endorsement is implied by use of the Software.
+
+5) NO WARRANTY
+   - THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+     SOFTWARE.
+
+6) Termination
+   - Any breach of this license automatically terminates your rights under it. Upon
+     termination you must cease all use and distribution of the Software.
+
+If you wish to use the Software commercially, please reach out at:
+contact@sebastian-schult-dev.de
