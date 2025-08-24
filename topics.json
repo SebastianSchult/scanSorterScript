@@ -19,5 +19,6 @@
   "Hornbach": ["hornbach", "hornbach baumarkt", "baumarkt", "renovierung", "baustoffe"],
   "Hasselbring": ["hasselbring", "hasselbring baumarkt", "baumarkt", "renovierung", "baustoffe"],
   "DM": ["dm", "dm drogeriemarkt", "drogeriemarkt", "kosmetik", "pflege"],
+  "Netto": ["netto", "netto markt", "supermarkt", "discount"],
   "Sonstiges": []
 }
