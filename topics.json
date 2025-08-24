@@ -1,0 +1,20 @@
+{
+  "Strom": ["strom", "energie", "stromrechnung", "ewe", "vattenfall"],
+  "Internet": ["internet", "dsl", "kabel", "router", "tarif", "telekom", "vodafone", "o2"],
+  "Telefon": ["telefon", "festnetz", "mobilfunk", "handy", "sim"],
+  "Versicherung": ["versicherung", "haftpflicht", "hausrat", "kfz-versicherung", "krankenversicherung", "beitrag"],
+  "Miete": ["miete", "vermieter", "nebenkosten", "betriebsabrechnung", "hausverwaltung"],
+  "KFZ": ["kfz", "fahrzeug", "kennzeichen", "tüv", "hu", "au", "werkstatt", "inspektion"],
+  "Bank": ["bank", "giro", "kontoauszug", "überweisung", "abbuchung", "sparkasse", "volksbank"],
+  "Steuer": ["steuer", "finanzamt", "lohnsteuer", "umsatzsteuer", "elster", "bescheid"],
+  "Arzt": ["arzt", "praxis", "krankenhaus", "diagnose", "rezept", "privatrechnung"],
+  "Einkauf": ["rechnung", "beleg", "kassenbon", "einkauf", "markt", "supermarkt"],
+  "Gehalt": ["gehalt", "lohn", "abrechnung", "arbeitgeber"],
+  "Schule": ["schule", "zeugnis", "elternbrief", "klassenfahrt"],
+  "Amazon": ["amazon", "bestellung", "prime"],
+  "eBay": ["ebay", "kleinanzeigen", "bestellung"],
+  "Spenden": ["spende", "spendenquittung", "gemeinnützig"],
+  "Toom": ["toom", "toom baumarkt", "baumarkt", "renovierung", "baustoffe"],
+  "Stadt Cuxhaven": ["cuxhaven", "stadt", "abfall", "müll", "muell", "wasser", "gebühren", "gebuehren"],
+  "Sonstiges": []
+}
