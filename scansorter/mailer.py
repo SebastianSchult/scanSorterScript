@@ -1,4 +1,3 @@
-# scansorter/mailer.py
 # -*- coding: utf-8 -*-
 """Email notifications for processed documents."""
 
@@ -55,13 +54,22 @@ def summarize_text(text: str, limit_chars: int = 600) -> str:
     preview = " ".join(text.split())
     return (preview[:limit_chars].rstrip() + " …") if len(preview) > limit_chars else preview
 
+def _cfg_debug_summary(cfg: dict) -> str:
+    return (
+        f"enabled={cfg.get('enabled')} host={cfg.get('smtp_host')} port={cfg.get('smtp_port')} "
+        f"sec={cfg.get('security')} from={cfg.get('from_addr')} to={len(cfg.get('to_addrs') or [])} "
+        f"user_set={bool(cfg.get('username'))} pass_set={bool(os.environ.get('SCANSORTER_SMTP_PASS') or cfg.get('password'))}"
+    )
+
 def notify_document_filed(local_path: str, topic: str, date_str: str,
                           doc_date_iso: Optional[str], scan_date_iso: str,
-                          text: str, hits: list[str]) -> None:
+                          text: str, hits: list[str]) -> bool:
+    """Send an email notification with attachment (returns True if sent)."""
     cfg = load_email_settings()
+    logger.log(f"[DEBUG] email cfg: {_cfg_debug_summary(cfg)}")
     if not cfg.get("enabled"):
         logger.log("[DEBUG] email disabled (email.json missing or enabled=false)")
-        return
+        return False
 
     host   = cfg.get("smtp_host")
     port   = int(cfg.get("smtp_port", 465))
@@ -73,7 +81,7 @@ def notify_document_filed(local_path: str, topic: str, date_str: str,
 
     if not (host and from_ and to):
         logger.log("[DEBUG] email config incomplete (smtp_host/from_addr/to_addrs)")
-        return
+        return False
 
     subject = f"[ScanSorter] {date_str} · {topic} · {Path(local_path).name}"
     body = (
@@ -91,5 +99,38 @@ def notify_document_filed(local_path: str, topic: str, date_str: str,
     try:
         _send_via_smtp(host, port, sec, user, pw, from_, to, subject, body, attachments=[local_path])
         logger.log("[DEBUG] email sent")
+        return True
     except Exception as e:
         logger.log(f"[DEBUG] email send failed: {e}")
+        return False
+
+def send_test_email() -> bool:
+    """Send a simple test email (no attachment)."""
+    cfg = load_email_settings()
+    logger.log(f"[DEBUG] email cfg: {_cfg_debug_summary(cfg)}")
+    if not cfg.get("enabled"):
+        logger.log("[DEBUG] email disabled (enable in email.json)")
+        return False
+
+    host   = cfg.get("smtp_host")
+    port   = int(cfg.get("smtp_port", 465))
+    sec    = cfg.get("security", "SSL")
+    user   = cfg.get("username")
+    pw     = os.environ.get("SCANSORTER_SMTP_PASS") or cfg.get("password")
+    from_  = cfg.get("from_addr")
+    to     = cfg.get("to_addrs") or []
+
+    if not (host and from_ and to):
+        logger.log("[DEBUG] email config incomplete (smtp_host/from_addr/to_addrs)")
+        return False
+
+    subject = "[ScanSorter] Test email"
+    body = "This is a test email from ScanSorter. If you received this, SMTP setup works."
+
+    try:
+        _send_via_smtp(host, port, sec, user, pw, from_, to, subject, body)
+        logger.log("[DEBUG] test email sent")
+        return True
+    except Exception as e:
+        logger.log(f"[DEBUG] test email failed: {e}")
+        return False
